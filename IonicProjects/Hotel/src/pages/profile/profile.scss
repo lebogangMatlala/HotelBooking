@@ -1,0 +1,43 @@
+page-profile {
+    .icon1{
+
+        font-weight: bold;
+ 
+       margin-right: 90%;
+        color:rgb(114,92,203);
+    }
+
+    .icon2{
+
+        font-weight: bold;
+ 
+      margin-left: -7%;
+        color:rgb(114,92,203);
+    }
+
+    ion-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 90px 1px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+
+    .btn1{
+    background-color: goldenrod;
+    color: white;
+
+}
+.btn2{
+    background-color: goldenrod;
+    color: white;
+}
+
+.box{
+    background:transparent;
+    border: none
+
+}
+}

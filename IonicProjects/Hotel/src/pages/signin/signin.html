@@ -1,0 +1,40 @@
+<!--
+  Generated template for the SigninPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding class="main">
+  <ion-icon class="back" color="light" icon-only class="back" (click)="backButt()" name="md-arrow-dropleft-circle"></ion-icon>
+    
+   
+
+  <div class="screen1">
+     
+     
+    <h1 class="head">Sign In</h1>
+    <img src="../../assets/icon/LOGO2.png" width="45%" height="auto;" class="image">
+
+
+  
+        <ion-item class="placeholder1" no-lines>
+            
+            <ion-label ><ion-icon name="mail" class="icon1"></ion-icon></ion-label>
+            <ion-input type="email" placeholder="Email" no-lines #email>  </ion-input>
+        </ion-item>
+      
+        <ion-item class="placeholder1" no-lines>
+            <ion-label ><ion-icon name="lock" class="icon1"></ion-icon></ion-label>
+          <ion-input type="password" placeholder="Password" no-lines #password></ion-input>
+        </ion-item>
+      
+    
+
+   </div>
+
+   <div class="screen2">
+      <button ion-button full round  class="btn1" (click)="signIn(email.value,password.value)">Sign In</button>
+      <h6 style="color: white;">Don't have an account? <button ion-button clear  style="margin-top: -1%;color: white;" (click)="signUp()">Sign Up</button></h6>
+      
+    </div>
+</ion-content>

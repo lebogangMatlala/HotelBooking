@@ -1,0 +1,65 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="secondary">
+      <ion-buttons start class="icon1">
+          <button ion-button icon-only color="pupl"  (click)="gotoHome()">
+          <ion-icon name="arrow-back"></ion-icon>
+         </button>
+     </ion-buttons>
+     <ion-title class="texts">
+       Profile
+     </ion-title>
+     <ion-buttons start class="icon2">
+          <button ion-button icon-only color="pupl"  (click)="logout()">
+          <ion-icon name="log-out"></ion-icon>
+         </button>
+     </ion-buttons>
+
+   
+   </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div>
+      <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+          <ion-list >
+       
+          <button ion-item  *ngFor="let a of arrProfile">
+              First Name : {{a.name}}<br>
+          </button>  
+          <button ion-item  *ngFor="let a of arrProfile">
+              Last Name : {{a.surname}}<br>
+          </button> 
+          <button ion-item  *ngFor="let a of arrProfile">
+              Email Address: {{a.email}}<br>
+          </button>   
+                </ion-list>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+        <div>
+            <ion-grid>
+                <ion-row  *ngFor="let a of arrProfile">
+                  <ion-col col-6>
+                      <button ion-button full round  class="btn1"(click)="updateAccount(a.id)" >Update</button>
+                 </ion-col>
+                 <ion-col col-6>
+                        <button ion-button full round  class="btn2" (click)="deleteAccount(a.id)">Delete</button>
+                   </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+
+</ion-content>

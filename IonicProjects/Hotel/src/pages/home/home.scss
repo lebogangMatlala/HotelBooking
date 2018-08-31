@@ -1,0 +1,28 @@
+page-home {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+
+    .main{
+        background: radial-gradient( rgb(138, 111, 197), rgb(102, 7, 235));
+       
+       
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+        
+    }
+
+    .screen1{
+        
+        margin-top: 40%;
+    }
+
+    .screen2{
+        margin-top: 30%;
+    }
+    .btn1{
+        background-color: rgba(32, 31, 31, 0.404);
+    }
+}

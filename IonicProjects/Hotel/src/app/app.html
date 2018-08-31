@@ -1,0 +1,34 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="secondary">
+      <ion-title>LaBooh Hotel</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content  class="main">
+    <ion-list class="values" no-lines>
+
+      <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.ViewPage)" class="values">
+          <ion-icon name="home"></ion-icon>
+          Home
+        </button>
+        <button menuClose ion-item icon-left (click)="profile()" class="values">
+          <ion-icon name="person"></ion-icon>
+          Profile
+        </button>
+
+        <button menuClose ion-item icon-left (click)="booking()" class="values">
+            <ion-icon name="calendar"></ion-icon>
+           Booking
+          </button>
+          <button menuClose ion-item icon-left (click)="logout()" class="values">
+            <ion-icon name="person"></ion-icon>
+            Logout
+          </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

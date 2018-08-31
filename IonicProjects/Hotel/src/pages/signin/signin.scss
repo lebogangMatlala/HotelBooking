@@ -1,0 +1,82 @@
+page-signin {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    
+    .back{
+     position: relative;
+     font-size: 40px;
+     right: 45%;
+
+    }
+
+    .main{
+        background: radial-gradient( rgb(138, 111, 197), rgb(102, 7, 235));
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;  
+        
+    }
+
+    .screen1{
+        
+        margin-top: 2%;
+    }
+
+    .placeholder1{
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        margin-bottom: 2%;
+        background-color: rgba(0, 0, 0, 0.301);
+        border-bottom-style: none;
+       color: white;
+     
+
+    }
+
+    .text-input::-moz-placeholder {
+        color: white;
+      }
+      
+      .text-input:-ms-input-placeholder {
+        color: white;
+      }
+      
+      .text-input::-webkit-input-placeholder {
+        text-indent: 0;
+        color: white;
+      }
+
+    .head{
+        color: white;
+        font-size: 2em;
+        padding-top: 15%;
+       
+
+
+    }
+
+    .img{
+        margin-top: -20%;
+    }
+
+   
+
+
+    .screen2{
+        margin-top: 20%;
+    }
+    .btn1{
+        background-color: rgb(242,176,54);
+        color: white;
+    }
+
+    .icon1{
+        position: absolute;
+        left: 90%;
+        bottom: 30%;
+        color: white;
+    }
+
+}
