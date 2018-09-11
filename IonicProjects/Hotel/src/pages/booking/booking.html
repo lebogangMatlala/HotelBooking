@@ -53,16 +53,17 @@
 
                     <ion-item>
                         <ion-label>Check In</ion-label>
-                        <ion-datetime displayFormat="MM/DD/YYYY"  #checkin></ion-datetime>
+                        <ion-input type="date" #checkin></ion-input>
                       </ion-item>
 
                       <ion-item>
                           <ion-label>Check Out</ion-label>
-                          <ion-datetime displayFormat="MM/DD/YYYY"  #checkout></ion-datetime>
+                          <ion-input type="date" #checkout></ion-input>
                         </ion-item>
                     <ion-item>
                         <ion-label>Adults</ion-label>
                         <ion-select  #adults>
+                          <ion-option value="0">0</ion-option>
                           <ion-option value="1">1</ion-option>
                           <ion-option value="2">2</ion-option>
                           <ion-option value="3">3</ion-option>
@@ -73,6 +74,7 @@
                       <ion-item>
                           <ion-label>Children</ion-label>
                           <ion-select #children>
+                            <ion-option value="0">0</ion-option>
                             <ion-option value="1">1</ion-option>
                             <ion-option value="2">2</ion-option>
                             <ion-option value="3">3</ion-option>

@@ -13,6 +13,7 @@ import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
 import { ViewPage } from '../pages/view/view';
 import { BookingPage } from '../pages/booking/booking';
+import { DetailsPage } from '../pages/details/details';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BookingPage } from '../pages/booking/booking';
     SigninPage,
     SignupPage,
     ViewPage,
-    BookingPage
+    BookingPage,
+    DetailsPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { BookingPage } from '../pages/booking/booking';
     SigninPage,
     SignupPage,
     ViewPage,
-    BookingPage
+    BookingPage,
+    DetailsPage
   ],
   providers: [
     StatusBar,

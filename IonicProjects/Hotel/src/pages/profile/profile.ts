@@ -214,7 +214,7 @@ export class ProfilePage {
          this.delete(a);
          user.delete().then(() =>{
            // User deleted.
-         
+           this.navCtrl.setRoot(HomePage);
          
         
          }).catch(function(error) {

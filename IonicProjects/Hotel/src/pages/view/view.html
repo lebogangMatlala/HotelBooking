@@ -20,9 +20,23 @@
    </ion-navbar>
 </ion-header>
   <ion-content class="card-background-page">
- 
+    <ion-list *ngFor="let a of roomArray;let b=index;">
+    
+     <ion-card no-lines (click)="click(b)">
+        <img src="{{a.roomimage}}" height="100%;"/>
+        <div class="card-title">{{a.roomName}}<br>
+          
+        </div>
+        <div class="card-subtitle">
+          <button ion-button  round  class="btn2"  >{{a.roomPrice}}</button>
+        </div>
+     
+      </ion-card>
 
-      <ion-card no-lines>
+    </ion-list>
+    
+
+      <!-- <ion-card no-lines (click)="click()">
         <img src="../../assets/icon/beds/double.jpg" height="100%;"/>
         <div class="card-title">Double room<br>
           
@@ -30,14 +44,7 @@
         <div class="card-subtitle">
           <button ion-button  round  class="btn2"  >R1200,00</button>
         </div>
-        
-     <p>It includes<br>
-      <ion-icon name="star"></ion-icon>Queen bed
-      <ion-icon name="star"></ion-icon>1 bathroom
-      <ion-icon name="star"></ion-icon>Wi-fi
-      <ion-icon name="star"></ion-icon>TV & Refrigerator
-      <ion-icon name="star"></ion-icon>room service
-          </p>
+     
       </ion-card>
     
       <ion-card>
@@ -49,14 +56,7 @@
         <div class="card-subtitle">
           <button ion-button  round  class="btn2"  >R1400,00</button>
         </div>
-        <p>It includes<br>
-          <ion-icon name="star"></ion-icon>Two single beds
-          <ion-icon name="star"></ion-icon>1 bathroom
-          <ion-icon name="star"></ion-icon>Wi-fi
-          <ion-icon name="star"></ion-icon>TV & Refrigerator
-          <ion-icon name="star"></ion-icon>room service
-          
-        </p>
+     
       </ion-card>
     
       <ion-card>
@@ -68,13 +68,7 @@
         <div class="card-subtitle">
           <button ion-button  round  class="btn2"  >R1650,00</button>
         </div>
-        <p>It includes<br>
-          <ion-icon name="star"></ion-icon>One single & One Queen bed
-          <ion-icon name="star"></ion-icon>2 bathroom
-          <ion-icon name="star"></ion-icon>Wi-fi
-          <ion-icon name="star"></ion-icon>TV & Refrigerator
-          <ion-icon name="star"></ion-icon>room service 
-        </p>
+  
       </ion-card>
     
       <ion-card>
@@ -86,13 +80,7 @@
         <div class="card-subtitle">
           <button ion-button  round  class="btn2"  >R1850,00</button>
         </div>
-        <p>It includes<br>
-          <ion-icon name="star"></ion-icon>Three single beds
-          <ion-icon name="star"></ion-icon>2 bathroom
-          <ion-icon name="star"></ion-icon>Wi-fi
-          <ion-icon name="star"></ion-icon>TV & Refrigerator
-          <ion-icon name="star"></ion-icon>room service 
-        </p>
+     
       </ion-card>
 
       
@@ -105,13 +93,7 @@
         <div class="card-subtitle">
           <button ion-button  round  class="btn2"  >R2100,00</button>
         </div>
-        <p>It includes<br>
-          <ion-icon name="star"></ion-icon>2 Queen double beds
-          <ion-icon name="star"></ion-icon>2 bathroom
-          <ion-icon name="star"></ion-icon>Wi-fi
-          <ion-icon name="star"></ion-icon>TV & Refrigerator
-          <ion-icon name="star"></ion-icon>room service 
-        </p>
+     
       </ion-card>
 
       
@@ -124,13 +106,7 @@
         <div class="card-subtitle">
           <button ion-button  round  class="btn2"  >R2500,00</button>
         </div>
-        <p>It includes<br>
-          <ion-icon name="star"></ion-icon>4 single beds
-          <ion-icon name="star"></ion-icon>2 bathroom
-          <ion-icon name="star"></ion-icon>Wi-fi
-          <ion-icon name="star"></ion-icon>TV & Refrigerator
-          <ion-icon name="star"></ion-icon>room service 
-        </p>
+      
       </ion-card>
 
       
@@ -143,13 +119,7 @@
         <div class="card-subtitle">
           <button ion-button  round  class="btn2"  >R2600,00</button>
         </div>
-        <p>It includes<br>
-          <ion-icon name="star"></ion-icon>1  Queen bed
-          <ion-icon name="star"></ion-icon>1 bathroom
-          <ion-icon name="star"></ion-icon>Wi-fi
-          <ion-icon name="star"></ion-icon>TV & Refrigerator
-          <ion-icon name="star"></ion-icon>room service 
-        </p>
+     
       </ion-card>
 
       <ion-card>
@@ -161,13 +131,9 @@
         <div class="card-subtitle">
           
           <button ion-button  round  class="btn2"  >R2800,00</button>
-        </div>
+        </div> 
 
-        <p>It includes<br>
-          <ion-icon name="star"></ion-icon>1 king bed
-          <ion-icon name="star"></ion-icon>1 bathroom
-          <ion-icon name="star"></ion-icon>Wi-fi
-          <ion-icon name="star"></ion-icon>TV & Refrigerator
-          <ion-icon name="star"></ion-icon>room service 
-        </p>
-      </ion-card>
+     
+      </ion-card>-->
+
+      </ion-content>
