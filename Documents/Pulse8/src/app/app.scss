@@ -1,0 +1,82 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.item.item-block.item-ios.item-radio{
+    background: linear-gradient(rgba($color-dark, .9), rgba($color-dark, .8)),url('../assets/imgs/7.jpg') !important;
+    background-size: cover !important;
+    border: none ;
+    color: white !important;
+}
+
+.popover-ios{
+    background: linear-gradient(rgba($color-dark, .9), rgba($color-dark, .8)) !important;
+}
+
+.popover-md{
+    background: linear-gradient(rgba($color-dark, .9), rgba($color-dark, .8)) !important;
+}
+
+.popover{
+    background: linear-gradient(rgba($color-dark, .9), rgba($color-dark, .8)) !important;
+}
+
+.alert-wrapper{
+    background: linear-gradient(rgba($color-dark, .9), rgba($color-dark, .8)),url('../assets/imgs/7.jpg') !important;
+    background-size: cover !important;
+    color: $color-primary-light;
+}
+
+div.alert-message{
+    color: white !important;
+}
+
+.alert-input{
+    background: rgba($color-grey-light, .1) !important;
+    border: none !important;
+    color: white !important;
+    border-radius: 5rem !important;
+}
+
+.disable-hover.alert-button.alert-button-ios.alert-button-default.alert-button-default-ios:nth-child(1){
+    border-top: 1px solid rgba($color-grey-light, .5) !important;
+    border-right: 1px solid rgba($color-grey-light, .5) !important;
+}
+
+.disable-hover.alert-button.alert-button-ios.alert-button-default.alert-button-default-ios:nth-child(2){
+    border-top: 1px solid rgba($color-grey-light, .5) !important;
+}
+.alert-md .alert-radio-label {
+    overflow: hidden;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: white;
+    padding: 13px 26px;
+}
+
+.alert-radio-label{
+    color: $color-grey-light !important; 
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 5px;
+    background-color: white;
+    border: 1px soild green;
+   
+}

@@ -1,0 +1,126 @@
+<ion-content>
+    <div class="hero">
+        <button ion-button clear  class="hero__back">
+            <ion-icon (click)="back()" style="zoom: 1.5;" ios="ios-arrow-round-back" md="md-arrow-round-back"></ion-icon>
+        </button>
+        <div class="hero__herobanner">
+            <div class="hero__herobanner__heroimagecontainer">
+                <img [src]="pic" alt="" class="hero__herobanner__heroimagecontainer--image">
+            </div>
+            <div class="hero__herobanner__herotagcontainer">
+                <div class="hero__herobanner__herotagcontainer__headingcontainer">
+                    <h1 class="hero__herobanner__herotagcontainer__headingcontainer--heading">{{fullname}}</h1>
+                    <span class="buttoncontainer">
+                        <button ion-button icon-only (click)="edit()">
+                            <ion-icon ios="ios-create" md="md-create"></ion-icon>
+                        </button>
+                        <button ion-button icon-only (click)="upload()">
+                            <ion-icon ios="ios-cloud-upload" md="md-cloud-upload"></ion-icon>
+                        </button>
+                        <!-- <button ion-button icon-only (click)="changes()">
+                                <ion-icon ios="ios-cloud-upload" md="md-cloud-upload"></ion-icon>
+                            </button> -->
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ion-segment [(ngModel)]="profile" class="segbtns">
+        <ion-segment-button value="infor">
+            Info
+        </ion-segment-button>
+        <ion-segment-button value="music">
+            Music
+        </ion-segment-button>
+        <ion-segment-button value="bookings">
+            Bookings
+        </ion-segment-button>
+    </ion-segment>
+
+    <div [ngSwitch]="profile" class="segcontainer">
+        <ion-list *ngSwitchCase="'music'" class="segcontainer__seg">
+            <ion-item no-lines *ngFor="let x of trackarray;let i=index;" class="segcontainer__seg__listitems">
+                <h2 class="segcontainer__seg__listitems--artistname" (click)="deleteTrack(i)">{{x.count}}.{{x.artistName}}</h2>
+                <h3 class="segcontainer__seg__listitems--artisttrack">{{x.trackName}}</h3>
+                <p class="segcontainer__seg__listitems--artistlink">Listen to the song
+                    <a (click)="openLink(x.trackLink)">here......</a>
+                </p>
+            </ion-item>
+
+            <div class="nocontent" *ngIf="trackarray.length == 0 || trackarray.length == undefined">
+                <div class="nocontent__contents">
+                    <img class="nocontent__contents--image" src="../../assets/imgs/sound-wavesgrey.png" alt="">
+                    <p class="nocontent__contents--text" style="color: white">Its lonely here...</p>
+                </div>
+            </div>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'infor'" class="segcontainer__seg">
+            <div no-lines *ngFor="let z of inforArray;let a=index;" class="segcontainer__seg__bio">
+                <div class="segcontainer__seg__bio__userProfile">
+                    <h2 class="segcontainer__seg__bio__userProfile--bioheading">Bio</h2>
+                    <p class="segcontainer__seg__bio__userProfile--biotext">{{z.bio}}</p>
+                </div>
+                <div class="nocontent1" *ngIf="z.bio == '' || z.bio == undefined">
+                    <div class="nocontent1__contents">
+                        <img class="nocontent1__contents--image" src="../../assets/imgs/sound-wavesgrey.png" alt="">
+                        <p class="nocontent1__contents--text" style="color: white">Its lonely here...</p>
+                    </div>
+                </div>
+            </div>
+            <div no-lines *ngFor="let z of inforArray;let a=index;" class="segcontainer__seg__profilecontainer">
+                <div class="segcontainer__seg__profilecontainer__profile">
+                    <h2 class="segcontainer__seg__profilecontainer__profile--bioheading">Profile</h2>
+                    <p *ngIf="z.stagename != undefined || z.stagename != z.stagename" class="segcontainer__seg__profilecontainer__profile--information">
+                        <ion-icon name="contact"></ion-icon> <span class="infotext">{{z.stagename}}</span>
+                    </p>
+                    <p class="segcontainer__seg__profilecontainer__profile--information">
+                        <ion-icon name="mail"></ion-icon> <span class="infotext">{{z.email}}</span>
+                    </p>
+                    <p *ngIf="z.city != undefined || z.city != z.city" class="segcontainer__seg__profilecontainer__profile--information">
+                        <ion-icon name="locate"></ion-icon> <span class="infotext">{{z.city}}</span>
+                    </p>
+                </div>
+            </div>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'bookings'" class="segcontainer__seg">
+            <!-- <div no-lines class="segcontainer__seg__cards" *ngFor="let i of bookingArr;let a=index;" (click)="viewBooking(a)">
+                <p class="segcontainer__seg__cards--text"><strong>{{i.fanName}}</strong>, has requested
+                    to book you, check your email.</p>
+                <p class="segcontainer__seg__cards--datetext">{{i.date}} {{i.time}}</p>
+            </div> -->
+
+            <ion-item-sliding *ngFor="let i of bookingArr;let a=index;" class="segcontainer__seg__cardcontainer">
+                <ion-item no-lines class="segcontainer__seg__cardcontainer__cards" (click)="viewBooking(a)">
+                    <ion-avatar item-start>
+                        <img [src]="i.image">
+                    </ion-avatar>
+                    <p class="segcontainer__seg__cardcontainer__cards--text"><strong>{{i.fanName}}</strong>, has requested
+                        to book you, check your email.</p>
+                    <p class="segcontainer__seg__cardcontainer__cards--datetext">{{i.date}} {{i.time}}</p>
+                </ion-item>
+                <ion-item-options side="right" (click)="delete(a)">
+                    <button ion-button color="danger">
+                        <ion-icon name="trash"></ion-icon>
+                        Delete
+                    </button>
+                </ion-item-options>
+            </ion-item-sliding>
+
+            <div class="nocontent" *ngIf="bookingArr.length == 0 || bookingArr.length == undefined">
+                <div class="nocontent__contents">
+                    <img class="nocontent__contents--image" src="../../assets/imgs/sound-wavesgrey.png" alt="">
+                    <p class="nocontent__contents--text" style="color: white">Its lonely here...</p>
+                </div>
+            </div>
+        </ion-list>
+
+        <ion-fab right bottom>
+            <button ion-fab color="primary" (click)="logout()">
+                <ion-icon name="log-out"></ion-icon>
+            </button>
+        </ion-fab>
+    </div>
+</ion-content>

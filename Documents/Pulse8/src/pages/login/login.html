@@ -1,0 +1,33 @@
+<ion-content>
+    <div class="contentflex">
+        <form #f="ngForm" (ngSubmit)="login(f)">
+            <div class="contentflex__iconcontainer">
+                <img src="../../assets/imgs/sound-wavesdard.png" class="contentflex__iconcontainer__icon">
+            </div>
+            <div class="contentflex__formcontent">
+                <ion-item no-lines>
+                    <ion-label color="light">
+                        <ion-icon name="mail"></ion-icon>
+                    </ion-label>
+                    <ion-input type="email" class="contentflex__formcontent--input" placeholder="Email Address" name="email" id="input" ngModel
+                        required></ion-input>
+                </ion-item>
+
+                <ion-item no-lines>
+                    <ion-label color="light">
+                        <ion-icon name="lock"></ion-icon>
+                    </ion-label>
+                    <ion-input type="password" class="contentflex__formcontent--input" placeholder="Password" name="password" pattern=".{6,30}"
+                        id="input" ngModel required></ion-input>
+                </ion-item>
+            </div>
+            <div class="contentflex__buttoncontent">
+                <button class="contentflex__buttoncontent--button" type="submit" ion-button block [disabled]="!f.valid">Sign In</button>
+            </div>
+        </form>
+        <div class="contentflex__buttoncontent2">
+            <p class="contentflex__buttoncontent2--button" type="submit" ion-button block (click)="signup()">Create Account</p>
+            <p class="contentflex__buttoncontent2--button" type="submit" ion-button block (click)="resetPassword()">Forgot Password?</p>
+        </div>
+    </div>
+</ion-content>
