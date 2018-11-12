@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page Title</title>
+<style>
+body{
+	margin :0;
+	padding : 0;
+	background : #313131;
+	
+}
+.slider{
+	width :800px;
+	height : 400px;
+	background : url(pool.jpg);
+	margin : 100px auto;
+	animation : slide 18s infinite;
+}
+
+@keyframes slide{
+	25%{
+		background :url(pool.jpg);
+	}
+	50%{
+		background :url(pool2.jpg);
+	}
+	75%{
+		background :url(break.jpg);
+	}
+	100%{
+		background :url(desert.jpg);
+	}
+}
+</style>
+
+<body>
+	<div class="slider">
+	
+	</div>
+</body>
+
+</html>

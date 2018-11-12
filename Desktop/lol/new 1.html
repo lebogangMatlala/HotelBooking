@@ -1,0 +1,30 @@
+update(a,mp, tsm){
+ 
+let newTask =this.list[a].todo;
+let newTime =this.list[a].time;
+
+if(mp != '' && mp!= null && tsm != ''  && tsm != null)
+{
+  let objct= new TaskTD(mp,tsm);
+  this.list.splice(a,1,objct);
+  //this.list[a] = objct;
+
+}
+else if(mp != '' && mp!= null)
+{
+  let objct= new TaskTD(mp,newTime);
+  this.list.splice(a,1,objct);
+}
+else if( tsm != ''  && tsm != null)
+{
+  let objct= new TaskTD(newTask,tsm);
+ this.list.splice(a,1,objct);
+
+
+}
+<ul *ngFor="let b of list; let a = index">
+    {{b.todo}}
+    {{b.time}} 
+    <input type="reset" value="delete" (click) ="delete(b)">
+    <input type="submit" value="update" (click) ="update(a,todo.value,time.value) ">
+  </ul> 
